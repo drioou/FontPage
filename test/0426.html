@@ -70,7 +70,7 @@
     fun();
     fun();
     fun = null;
-    fun();
+    //    fun();
     aaa();
     function escapeHtml(str) {
         return str.replace(/[<>"&]/g, function (match) {
@@ -79,8 +79,45 @@
                     return "&lt;";
             }
         })
+    }
+    ;
+    if (!String.prototype.trim) {
+        String.prototype.trim = function () {
+            return this.replace(/^\s+/, "").replace(/\s+$/, '');
+        }
+    }
+    var str = '\t\n test string';
+    str.prototype;
+    console.log(str);
+    console.log(str === 'test string');
+    var myArray = [2, 2, 3, 4, 5, 5, 5, '你好', '你好', '不'];
+    myArray.filter(function (elem, pos, self) {
+        return self.indexOf(elem) == pos
+    });
+    function unique1(a, b) {
+
+    console.log(myArray);
+    function unique(arr) {
+        return Array.from(new Set(arr))
+    }
+    console.log(unique(myArray));
+    Array.prototype.unique3 = function () {
+        var res = [];
+        var json = {};
+        for (var i = 0; i < this.length; i++) {
+        }
+        if (!json[this[i]]) {
+            res.push(this[i]);
+            json[this[i]] = 1;
+        }
+        return res;
     };
+    console.log(unique(myArray));
+    document.getElementsById('input').value;
+
 
 </script>
+<div id="input"></div>
+<input type="text" id="input">
 </body>
 </html>
