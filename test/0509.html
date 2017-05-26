@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var count = 0;
+    var oldParseInt = parseInt;
+    window.parseInt = function () {
+        count += 1;
+        return oldParseInt.apply(null, arguments);
+    };
+    console.log(parseInt('10'));
+    console.log(parseInt('10'));
+    console.log(count)
+    console.log(count);
+    var arr = [1, 2, 3, 4];
+    arr.reduce(function (x, y) {
+        console.log(x * 10 + y);
+    })
+    var arr = [1, 3, 5, 4, 6, 7];
+    var r = arr.filter(function (x) {
+        return x % 2 !== 0;
+    })
+    console.log(r); var arr = ['A', '', 'B', null, undefined, 'c', '  ']; var r = arr.filter(function (s) { return s && s.trim(); }); console.log(r); var ano = '  a b ' console.log(ano.trim()); var arr = ['A', 'B', 'C'];
+    var r = arr.filter(function (element, index, self) {
+        console.log(element, index, self);
+        return true;
+    }); var obj = {
+        birth: 1990,
+        getAge: function (year) {
+            var b = this.birth;
+            var fn = (y) => y - this.birth;
+            return fn.call({birth: 2000}, year);
+        }
+    };
+    console.log(obj.getAge(2015));
+    var foo =1;
+    function static(){
+        console.log(foo);
+    }
+    !function(){
+        var foo =2;
+        static();
+    }();
+</script>
+</body>
+</html>

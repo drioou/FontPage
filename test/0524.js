@@ -84,19 +84,28 @@ var obj = {
 // var b = bar(3);
 //
 
-function foo(el){
-    console.log(el,this.id);
+function foo(el) {
+    console.log(el, this.id);
 }
 var obj = {
-    id:'awesome'
+    id: 'awesome'
 };
-[1,2,3].forEach(foo,obj);
+[1, 2, 3].forEach(foo, obj);
 
 var node = document.createElement('div');
 node.classList.add('class1');
 node.classList.add('class2');
 node.classList.add('class3');
 // document.node
-function foo(p1,p2){
-    this.val = p1+p2;
+// function foo(p1, p2) {
+//     console.log(this.val = p1 + p2)
+// }
+// var bar = foo.bind('p2',null);
+// var baz = new bar('p1');
+// baz.val;
+
+var myObject = {
+    a:2
 }
+var b = Object.getOwnPropertyDescriptor(myObject,'a')
+console.log(b)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div {
+            /*width: 200px;*/
+            height: 200px;
+        }
+        .div2{
+            background: #655;
+            background-image:radial-gradient(tan 30%,transparent 0),radial-gradient(tan 30%,transparent 0);
+            background-size:30px 30px;
+        }
+        .div3{
+            background: linear-gradient(90deg,
+            #fb3 15%, #655 0, #655 40%,
+            #ab4 0, #ab4 65%, hsl(20, 40%, 90%) 0); background-size: 80px 100%;
+        }
+        .button{
+            background:red;
+            transform:skewX(-45deg);
+        }
+        .button > div{transform:skewX(45deg);}
+    </style>
+</head>
+<body>
+<!--<div></div>-->
+<div class="div2"></div>
+<div class="div3"></div>
+<a href="" class="button"><div> click me</div></a>
+</body>
+</html>
