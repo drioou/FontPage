@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wrapper, .sub {
+            background: url('2.jpeg');
+            -webkit-background-size: contain;
+            background-size: contain;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px 2px hsla(200, 50%, 10%, 0.1) inset;
+            border: 1px solid hsla(200, 50%, 10%, 0.1);
+        }
+
+        #wrapper {
+            width: 500px;
+            height: 500px;
+            margin: calc(50vh - 250px) calc(50vw - 250px);
+        }
+
+        .sub {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            transform-origin: 50% 50%;
+            transform: rotate(0deg);
+            animation: 100s 1s rot linear infinite;
+        }
+
+        @keyframes rot {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(372deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Yech! Bad PUG!!! :( -->
+<div id="wrapper">
+    <div class="sub">
+        <div class="sub">
+            <div class="sub">
+                <div class="sub">
+                    <div class="sub">
+                        <div class="sub">
+                            <div class="sub">
+                                <div class="sub">
+                                    <div class="sub">
+                                        <div class="sub">
+                                            <!--<div class="sub">-->
+                                                <!--<div class="sub">-->
+                                                    <!--<div class="sub">-->
+                                                        <!--<div class="sub">-->
+                                                            <!--<div class="sub">-->
+                                                                <!--<div class="sub">-->
+                                                                    <!--<div class="sub">-->
+                                                                        <!--<div class="sub">-->
+                                                                            <!--<div class="sub">-->
+                                                                                <!--<div class="sub">-->
+                                                                                    <!--<div class="sub">-->
+                                                                                        <!--<div class="sub">-->
+                                                                                            <!--<div class="sub">-->
+                                                                                                <!--<div class="sub">-->
+                                                                                                    <!--<div class="sub">-->
+                                                                                                        <!--<div class="sub"></div>-->
+                                                                                                    <!--</div>-->
+                                                                                                <!--</div>-->
+                                                                                            <!--</div>-->
+                                                                                        <!--</div>-->
+                                                                                    <!--</div>-->
+                                                                                <!--</div>-->
+                                                                            <!--</div>-->
+                                                                        <!--</div>-->
+                                                                    <!--</div>-->
+                                                                <!--</div>-->
+                                                            <!--</div>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
